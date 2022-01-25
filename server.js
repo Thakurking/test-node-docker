@@ -11,6 +11,13 @@ app.get("/get-msg", async (req, res) => {
     })
 })
 
+app.get("/get-response", async (req, res) => {
+    return res.json({
+        message: "Sending Response From Server",
+        status: true
+    })
+})
+
 app.listen(port, () => {
     console.log(`server is running on ${port}`)
 })
